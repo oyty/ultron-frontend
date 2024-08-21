@@ -1,0 +1,6 @@
+/*!
+ *  build: Vue  Admin Plus
+ *  copyright: vue-admin-beautiful.com
+ *  time: 2024-08-21 17:45:49
+ */
+"use strict";(self["webpackChunkadmin_plus"]=self["webpackChunkadmin_plus"]||[]).push([[4300],{94300:function(e,t,n){n.r(t),n.d(t,{default:function(){return v}});var a=n(65777),s=(n(25638),n(31004),n(57305));const r={class:"test1-container"};function u(e,t,n,u,c,o){const i=a.KR,l=(0,s.g2)("vab-json-viewer");return(0,s.uX)(),(0,s.CE)("div",r,[(0,s.bF)(i,{closable:!1,"show-icon":"",title:"params",type:"success"}),(0,s.bF)(l,{copyable:"","expand-depth":5,sort:"",value:e.route},null,8,["value"])])}var c=n(74863),o=n(23759),i=n.n(o),l=n(70817),p=n(5879),d=(0,s.pM)({name:"Test1",components:{VabJsonViewer:i()},setup(){const e=(0,p.lq)(),t=(0,c.Z)(),{changeTabsMeta:n}=t,a=(0,l.Kh)({route:{}}),r=()=>{(0,s.dY)((()=>{n({title:"Query",meta:{title:`Query Id=${e.query.id}`}});const t=e.matched[0].children.filter((e=>"Test1"===e.name))[0],s=e.path.substring(e.path.lastIndexOf("/")+1,e.path.length);a.route={path:t.path,params:{id:s},name:t.name,meta:t.meta}}))};return(0,s.sV)((()=>{r()})),{...(0,l.QW)(a)}}});function h(e){e.__source="src/views/other/dynamicSegment/test1.vue"}var m=n(88093);"function"===typeof h&&h(d);const f=(0,m.A)(d,[["render",u]]);var v=f}}]);
