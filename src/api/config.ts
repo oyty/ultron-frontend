@@ -1,16 +1,16 @@
 import request from '@/utils/request'
 
-export function updateConfig(data?: any) {
+export function updateCoordinateConfig(data?: any) {
   return request({
-    url: '/config/update',
+    url: '/config/coordinate/update',
     method: 'post',
     data,
   })
 }
 
-export function getConfig(params?: any) {
+export function getCoordinateConfig(params?: any) {
   return request({
-    url: '/config/fetch',
+    url: '/config/coordinate/params',
     method: 'get',
     params,
   })

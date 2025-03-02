@@ -1,6 +1,5 @@
 <script setup>
   import { useUserStore } from '@/store/modules/user'
-  import { getList } from '@/api/description'
   import VabAvatarList from '@/plugins/VabAvatarList'
 
   const userStore = useUserStore()
@@ -40,22 +39,9 @@
             ? `下午好 ${username.value}，你一定有些累了，喝杯咖啡提提神。`
             : `晚上好 ${username.value}，愿你天黑有灯，下雨有伞。`
   }
-  const fetchData = async () => {
-    const {
-      data: { description },
-    } = await getList()
-    state.description = description
-  }
 
   onMounted(() => {
     // 仅在开发坏境和演示地址调用首页更新提示AD，防止正式环境触发更新推广
-    if (
-      location.hostname.includes('vue-admin-beautiful') ||
-      location.hostname.includes('chu1204505056') ||
-      location.hostname.includes('localhost') ||
-      location.hostname.includes('127.0.0.1')
-    )
-      fetchData()
   })
 </script>
 

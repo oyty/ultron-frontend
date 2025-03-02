@@ -1,16 +1,16 @@
 /**
  * @description router全局配置，如有必要可分文件抽离，其中asyncRoutes只有在intelligence模式下才会用到，pro版只支持remixIcon图标，具体配置请查看vip群文档
  */
+import { authentication, isHashRouterMode, publicPath } from '@/config'
+import Layout from '@vab/layouts/index.vue'
 import type { RouteRecordName, RouteRecordRaw } from 'vue-router'
-import type { VabRouteRecord } from '/#/router'
 import {
   createRouter,
   createWebHashHistory,
   createWebHistory,
 } from 'vue-router'
-import Layout from '@vab/layouts/index.vue'
 import { setupPermissions } from './permissions'
-import { authentication, isHashRouterMode, publicPath } from '@/config'
+import type { VabRouteRecord } from '/#/router'
 
 export const constantRoutes: VabRouteRecord[] = [
   {
@@ -133,6 +133,14 @@ export const asyncRoutes: VabRouteRecord[] = [
           title: '详情页',
           activeMenu: '/companyconfig/task/index',
           dynamicNewTab: true, //详情页根据id传参不同可打开多个
+        },
+      },
+      {
+        path: 'lconfig',
+        name: 'LConfig',
+        component: () => import('@/views/companyconfig/lconfig/index.vue'),
+        meta: {
+          title: '坐标转换配置',
         },
       },
     ],
