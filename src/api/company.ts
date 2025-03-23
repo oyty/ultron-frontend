@@ -30,3 +30,10 @@ export function doDelete(data) {
     data,
   })
 }
+
+export function getCompanyList() {
+  return request({
+    url: '/company/getList',
+    method: 'get',
+  })
+}
